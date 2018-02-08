@@ -4,36 +4,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>List of Movies</title>
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	rel="stylesheet">
 <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-      <div class="container">
-      <table class="table table-striped">
-      <caption>Movie List</caption>
-        <thead>
-			<tr>
-				<th>Id</th>
-	          	<th>Title</th>
-	          	<th>Director</th>
-			</tr>
-		</thead>
-		<tbody>
-        <c:forEach  items="${movies}" var ="movie">
-        <tr>
-          <td>${movie.id}</td>
-          <td>${movie.title}</td>
-          <td>${movie.director}</td>
-        </tr>
-        </c:forEach>
-        </tbody>
-      </table>
-    </div>
-    <div align="center"> 
-    	<a class="btn btn-success" href="/addMovie">Add Movie</a>
-    	<a class="btn btn-primary" href="/updateMovie">Update Movie</a>
-    	<a class="btn btn-danger" href="/deleteMovie">Delete Movie</a>
-    </div>
+	<div class="container">
+		<table class="table table-striped">
+			<caption>Movie List</caption>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Title</th>
+					<th>Director</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${movies}" var="movie">
+					<tr>
+						<td>${movie.id}</td>
+						<td>${movie.title}</td>
+						<td>${movie.director}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+		<div align="center">
+			<a class="btn btn-success" href="/addMovie">Add Movie</a> 
+			<a class="btn btn-primary" href="/updateMovie">Update Movie</a> 
+			<a class="btn btn-danger" href="/deleteMovie">Delete Movie</a>
+		</div>
+	</div>
 </body>
 </html>

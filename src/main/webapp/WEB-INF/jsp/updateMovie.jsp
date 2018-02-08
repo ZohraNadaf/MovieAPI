@@ -4,7 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Update Movie</title>
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	rel="stylesheet">
 <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
@@ -16,8 +17,8 @@
 				<tbody>
 					<tr>
 						<td><label>Id : </label></td>
-						<td><input name="id" type="text"/></td>
-					</tr>	
+						<td><input name="id" type="text" /></td>
+					</tr>
 				</tbody>
 			</table>
 			<table class="table table-striped">
@@ -25,16 +26,18 @@
 				<tbody>
 					<tr>
 						<td><label>Title : </label></td>
-						<td><input name="title" type="text"/></td>
+						<td><input name="title" type="text" /></td>
 					</tr>
 					<tr>
 						<td><label>Director : </label></td>
-						<td><input name="director" type="text"/></td>
-					</tr>	
+						<td><input name="director" type="text" /></td>
+					</tr>
 				</tbody>
 			</table>
+			<div align="center">
+				<input class="btn btn-primary" type="submit" />
+			</div>
 		</div>
-		<div  align="center"><input class = "btn btn-primary" type="submit"/></div>	
 	</form>
 </body>
 </html>

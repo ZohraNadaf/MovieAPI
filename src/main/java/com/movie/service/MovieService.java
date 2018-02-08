@@ -20,9 +20,15 @@ public class MovieService {
 		return movies;
 	}
 
-	public void createMovie(String id, String title, String director) {
+	public boolean createMovie(String id, String title, String director) {
 		Movie movie = new Movie(id,title,director);
+		for(Movie eachMovie : movies) {
+			if(eachMovie.getId().equals(id)) {
+				return false;
+			}
+		}
 		movies.add(movie);
+		return true;
 	}
 
 	public void updateMovie(String id,String title, String director) {

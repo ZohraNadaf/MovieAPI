@@ -4,7 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Delete Movie</title>
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	rel="stylesheet">
 <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
@@ -16,12 +17,14 @@
 				<tbody>
 					<tr>
 						<td><label>Id : </label></td>
-						<td><input name="id" type="text"/></td>
-					</tr>	
+						<td><input name="id" type="text" /></td>
+					</tr>
 				</tbody>
 			</table>
+			<div align="center">
+				<input class="btn btn-danger" type="submit" />
+			</div>
 		</div>
-		<div  align="center"><input class = "btn btn-danger" type="submit"/></div>	
 	</form>
 </body>
 </html>

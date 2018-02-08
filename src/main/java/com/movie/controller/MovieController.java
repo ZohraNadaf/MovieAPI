@@ -29,9 +29,14 @@ public class MovieController {
 	
 	@RequestMapping(value = "/addMovie", method = RequestMethod.POST)
 	public ModelAndView addMovie(ModelMap model,@RequestParam String id, @RequestParam String title, @RequestParam String director){
-		serviceObj.createMovie(id,title,director);
-		model.addAttribute("movies", serviceObj.readMovies());
-		return new ModelAndView("movieList");
+		if(serviceObj.createMovie(id,title,director)) {
+			model.addAttribute("movies", serviceObj.readMovies());
+			return new ModelAndView("movieList");
+		}else {
+			model.put("uniqueIdMsg", "Id already exists!!");
+			return new ModelAndView("addMovie");
+		}
+		
 	}
 	
 	@RequestMapping(value = "/updateMovie", method = RequestMethod.GET)
